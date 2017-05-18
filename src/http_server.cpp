@@ -122,7 +122,7 @@ string myFavouriteSingers(vector<Singer*> singers)
     return toReturn;
 }
 
-string keySingers(std::vector<Singer *> singers, std::string key, std::string value)
+string keySingers(vector<Singer *> singers, string key, string value)
 {
     json_t * array = json_array();
     bool check = false;
