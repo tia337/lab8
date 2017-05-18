@@ -1,5 +1,6 @@
-/** @file
-@brief - defines Server
+/** 
+@file
+@class - describes a htttpServer
 */
 #ifndef HTTP_SERVER_H
 #define HTTP_SERVER_H

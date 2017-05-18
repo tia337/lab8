@@ -1,8 +1,8 @@
 #include "singer.h"
-
+using namespace std;
 Singer::Singer() {}
 
-Singer::Singer(std::string name, std::string genre, std::string song, float duration, int id)
+Singer::Singer(string name, string genre, string song, float duration, int id)
 {
     _name = name;
     _genre = genre;
@@ -13,17 +13,17 @@ Singer::Singer(std::string name, std::string genre, std::string song, float dura
 
 Singer::~Singer() {}
 
-void Singer::setName(std::string name)
+void Singer::setName(string name)
 {
     _name = name;
 }
 
-void Singer::setGenre(std::string genre)
+void Singer::setGenre(string genre)
 {
     _genre = genre;
 }
 
-void Singer::setSong(std::string song)
+void Singer::setSong(string song)
 {
     _song = song;
 }
@@ -38,17 +38,17 @@ void Singer::setId(int id)
     _id = id;
 }
 
-std::string Singer::getName()
+string Singer::getName()
 {
     return _name;
 }
 
-std::string Singer::getGenre()
+string Singer::getGenre()
 {
     return _genre;
 }
 
-std::string Singer::getSong()
+string Singer::getSong()
 {
     return _song;
 }
@@ -63,17 +63,17 @@ int Singer::getId()
     return _id;
 }
 
-std::string Singer::getField(std::string field)
+string Singer::getField(string field)
 {
     if (field == "name") return _name;
     if (field == "genre") return _genre;
     if (field == "song") return _song;
-    if (field == "duration") return std::to_string(_duration);
-    if (field == "id") return std::to_string(_id);
+    if (field == "duration") return to_string(_duration);
+    if (field == "id") return to_string(_id);
     return NULL;
 }
 
-void singersInit(std::vector<Singer*> &singers)
+void singersInit(vector<Singer*> &singers)
 {
     singers.push_back(new Singer("Scorpions", "Rock","Lorelie", 4.47, 1));
     singers.push_back(new Singer("Ozzy Osbourne", "rock","I just want you", 4.56, 2));

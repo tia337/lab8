@@ -1,5 +1,5 @@
 #include "request.h"
-
+using namespace std;
 Request::Request() {
     _command = "";
     _URL = "";
@@ -11,27 +11,27 @@ Request::~Request() {}
 
 
 
-bool Request::parseString(std::string message){
+bool Request::parseString(string message){
   ////////// parse command /////////
   int posCommand = message.find(" ");
-  if (posCommand != (int)std::string::npos && posCommand > 2) {
+  if (posCommand != (int)string::npos && posCommand > 2) {
     _command = message.substr(0, posCommand);
   } else
     return false;
   ///////// parse URL /////////
   int pos1 = message.find("GET ");
   int pos2 = message.find(" HTTP/1.");
-  if (pos1 != (int)std::string::npos && pos2 != (int)std::string::npos) {
+  if (pos1 != (int)string::npos && pos2 != (int)string::npos) {
     _URL = message.substr(pos1 + 4, pos2 - pos1 - 4);
     int posKey1 = _URL.find("?");
     int posKey2 = _URL.find("=");
-    if (posKey1 != (int)std::string::npos &&
-        posKey2 != (int)std::string::npos) {
+    if (posKey1 != (int)string::npos &&
+        posKey2 != (int)string::npos) {
       _key = _URL.substr(posKey1 + 1, posKey2 - posKey1 - 1);
       _value = _URL.substr(posKey2 + 1, _URL.size() - posKey2 - 1);
     } else {
       int posValue = _URL.find("/favorites/");
-      if (posValue != (int)std::string::npos)
+      if (posValue != (int)string::npos)
         _value = _URL.substr(posValue + 11, _URL.size() - posValue - 11);
     }
   } else
@@ -39,42 +39,42 @@ bool Request::parseString(std::string message){
   return true;
 }
 
-void Request::setCommand(std::string command)
+void Request::setCommand(string command)
 {
     _command = command;
 }
 
-void Request::setURL(std::string URL)
+void Request::setURL(string URL)
 {
     _URL = URL;
 }
 
-void Request::setKey(std::string key)
+void Request::setKey(string key)
 {
     _key = key;
 }
 
-void Request::setValue(std::string value)
+void Request::setValue(string value)
 {
     _value = value;
 }
 
-std::string Request::getCommand()
+string Request::getCommand()
 {
     return _command;
 }
 
-std::string Request::getURL()
+string Request::getURL()
 {
     return _URL;
 }
 
-std::string Request::getValue()
+string Request::getValue()
 {
     return _value;
 }
 
-std::string Request::getKey()
+string Request::getKey()
 {
     return _key;
 }
