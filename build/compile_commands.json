@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/ilya/Downloads/HTTP-server-master/build",
+  "command": "/usr/bin/c++    -I/home/ilya/Downloads/HTTP-server-master/include  -std=c++11 -Werror -Wall -g   -o CMakeFiles/https_server.dir/main.cpp.o -c /home/ilya/Downloads/HTTP-server-master/main.cpp",
+  "file": "/home/ilya/Downloads/HTTP-server-master/main.cpp"
+},
+{
+  "directory": "/home/ilya/Downloads/HTTP-server-master/build",
+  "command": "/usr/bin/c++    -I/home/ilya/Downloads/HTTP-server-master/include  -std=c++11 -Werror -Wall -g   -o CMakeFiles/https_server.dir/src/http_server.cpp.o -c /home/ilya/Downloads/HTTP-server-master/src/http_server.cpp",
+  "file": "/home/ilya/Downloads/HTTP-server-master/src/http_server.cpp"
+},
+{
+  "directory": "/home/ilya/Downloads/HTTP-server-master/build",
+  "command": "/usr/bin/c++    -I/home/ilya/Downloads/HTTP-server-master/include  -std=c++11 -Werror -Wall -g   -o CMakeFiles/https_server.dir/src/singer.cpp.o -c /home/ilya/Downloads/HTTP-server-master/src/singer.cpp",
+  "file": "/home/ilya/Downloads/HTTP-server-master/src/singer.cpp"
+},
+{
+  "directory": "/home/ilya/Downloads/HTTP-server-master/build",
+  "command": "/usr/bin/c++    -I/home/ilya/Downloads/HTTP-server-master/include  -std=c++11 -Werror -Wall -g   -o CMakeFiles/https_server.dir/src/request.cpp.o -c /home/ilya/Downloads/HTTP-server-master/src/request.cpp",
+  "file": "/home/ilya/Downloads/HTTP-server-master/src/request.cpp"
+}
+]
